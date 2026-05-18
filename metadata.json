@@ -1,0 +1,8 @@
+{
+  "name": "Surigao Explorer",
+  "description": "Discover the hidden gems and breathtaking tourist spots of Surigao City, the City of Island Adventures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

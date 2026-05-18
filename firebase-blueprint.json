@@ -1,0 +1,48 @@
+{
+  "entities": {
+    "TouristSpot": {
+      "title": "Tourist Spot",
+      "description": "A local tourist destination in Surigao City",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string", "enum": ["Beach", "Nature", "Culture", "Adventure"] },
+        "image": { "type": "string" },
+        "coords": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          }
+        },
+        "order": { "type": "number" }
+      },
+      "required": ["id", "name", "description", "category", "image"]
+    },
+    "Feedback": {
+      "title": "User Feedback",
+      "description": "Feedback or inquiries submitted by users",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "text", "createdAt"]
+    }
+  },
+  "firestore": {
+    "spots": {
+      "schema": "TouristSpot",
+      "description": "Collection of featured tourist spots in Surigao City"
+    },
+    "feedback": {
+      "schema": "Feedback",
+      "description": "User feedback and inquiries"
+    }
+  }
+}
